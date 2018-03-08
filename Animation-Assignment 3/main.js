@@ -141,11 +141,11 @@ Trainer_Left.prototype.update = function() {
     
     if(this.game.saveButton) {
         console.log("The save key was pressed");
-        socket.emit("save", { studentname: "Brian Khang", statename: "initial", theTrainer: state, thePikachu: Pikachu_Spawner});
+        socket.emit("save", { studentname: "Brian Khang", statename: "Chaser", theTrainer: state, thePikachu: Pikachu_Spawner});
     }
     if(this.game.loadButton) {
         console.log("The load key was pressed");
-        socket.emit("load", { studentname: "Brian Khang", statename: "initial" });
+        socket.emit("load", { studentname: "Brian Khang", statename: "Chaser" });
     }
     this.boundingbox = new BoundingBox(this.x + 5 , this.y + 5 , this.animation.frameWidth - 12 , this.animation.frameHeight - 4);
     Entity.prototype.update.call(this);
